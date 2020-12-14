@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo List amna</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="quizscript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        margin: 0px;
+        font-size: 16px;
+        background-color: darkcyan;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        margin: 0px;
+        padding: 0px;
+        outline: none;
+
+    }
+
+    .home-box {
+
+        max-width: 600px;
+        background-color: rgb(255, 255, 255);
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+
+
+    .btn {
+        padding: 15px 45px;
+        background-color: darkcyan;
+        color: azure;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+    }
+
+    .quiz-box {
+        background-color: azure;
+        margin: 40px auto;
+        max-width: 600px;
+        border-radius: 10px;
+        padding: 60px;
+    }
+
+
+
+    .quiz-box .question-number {
+        font-size: 18px;
+        color: darkcyan;
+        font-weight: 400;
+        border-bottom: 1px solid rgb(170, 170, 170);
+        padding-bottom: 10px;
+        line-height: 25px;
+    }
+
+    .quiz-box .question-text {
+        font-size: 22px;
+        color: #000000;
+        line-height: 26px;
+        font-weight: 350;
+        padding: 20px 0px;
+    }
+
+    .quiz-box .option-container .option {
+        background-color: #cccccc;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+    }
+
+    .quiz-box .btn {
+        margin: 15px 0;
+    }
+
+    .quiz-box .answers-indicator {
+        border-top: 1px solid #cccccc;
+    }
+
+    .quiz-box .answers-indicator div {
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        background-color: #cccccc;
+        border-radius: 50%;
+        margin-right: 3px;
+        margin-top: 15px;
+
+    }
+
+    .result-box {
+        background-color: azure;
+        margin: 40px auto;
+        max-width: 600px;
+        border-radius: 10px;
+        padding: 60px;
+        text-align: center;
+    }
+
+    .result-box .heading {
+        font-size: 30px;
+        line-height: 40px;
+        color: #000000;
+    }
+
+    .result-box .form {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+    }
+
+    .result-box .form td {
+        border: 1px solid #cccccc;
+        padding: 8px;
+        font-weight: 500;
+        color: #000000;
+        width: 50%;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div class="home-box  hide" id="apps">
+        <h1>Quiz App</h1>
+        <br>
+        <p>Total Number Of Question:5</p>
+        <br>
+        <button onclick="fabiha()" type="button" class="btn" id="quiz">Quiz Start</button>
+    </div>
+
+    <div id="list" style="display: none;">
+        <div class="quiz-box" class="hide" id="rgawrf">
+            <div class="question-number">
+                Question 1 of 1
+            </div>
+            <div id="itemsstt" class="question-text">
+                <div id="list1">
+                    <p>How many days are there in a year?</p>
+                    <br>
+                    <div onclick="yearttt()">
+                        <p onclick="years1()" id="yearsko"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            399</p>
+                        <br>
+                        <br>
+                        <p onclick="years2()" id="yearss"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            365</p>
+                        <br>
+                        <br>
+                        <p onclick="years3()" id="yearert"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            388</p>
+                        <br>
+                        <br>
+                        <p onclick="years4()" id="yearsipt"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            377</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="option-container">
+
+
+
+
+            </div>
+            <div class="next-question-btn">
+                <button onclick="todos1()" style="display: none;" type="button" class="btn" id="next">Next</button>
+            </div>
+            <div class="answers-indicator">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="item" style="display: none;">
+        <div class="quiz-box" class="hide">
+            <div class="question-number">
+                Question 1 of 2
+            </div>
+            <div id="items1" class="question-text">
+                <div id="list2">
+                    <p>How are you?</p>
+                    <br>
+                    <div onclick="Howyyyyy()">
+                        <p onclick="you21()" id="yearsk45"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            I am fine</p>
+                        <br>
+                        <br>
+                        <p onclick="yourss2()" id="yearss46"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            I am not</p>
+                        <br>
+                        <br>
+                        <p onclick="yourss3()" id="yearert47"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            Excellent</p>
+                        <br>
+                        <br>
+                        <p onclick="yourss4()" id="yearsipt48"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            Fine</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="option-container">
+
+
+
+
+            </div>
+            <div class="next-question-btn">
+                <button onclick="todoss2()" style="display: none;" type="button" class="btn" id="next6">Next</button>
+            </div>
+            <div class="answers-indicator">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="item4" style="display: none;">
+        <div class="quiz-box" class="hide">
+            <div class="question-number">
+                Question 1 of 3
+            </div>
+            <div id="items3" class="question-text">
+                <div id="list2">
+                    <p>How many days are there in a month?</p>
+                    <br>
+                    <div onclick="amnaghtky()">
+                        <p onclick="amnaghtky1()" id="dayssss"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            30</p>
+                        <br>
+                        <br>
+                        <p onclick="amnaghtky2()" id="dayssss2"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            60</p>
+                        <br>
+                        <br>
+                        <p onclick="amnaghtky3()" id="dayssss23"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            40</p>
+                        <br>
+                        <br>
+                        <p onclick="amnaghtky4()" id="dayssss4"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            80</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="option-container">
+
+
+
+
+            </div>
+            <div class="next-question-btn">
+                <button onclick="todott3()" style="display: none;" type="button" class="btn" id="next1">Next</button>
+            </div>
+            <div class="answers-indicator">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="item5" style="display: none;">
+        <div class="quiz-box" class="hide">
+            <div class="question-number">
+                Question 1 of 4
+            </div>
+            <div id="items4" class="question-text">
+                <div id="list2">
+                    <p>When did Pakistan become independent?</p>
+                    <br>
+                    <div onclick="Pakistankkk()">
+                        <p onclick="Pakistankkk22()" id="become1"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            14-augest-1947</p>
+                        <br>
+                        <br>
+                        <p onclick="Pakistankkk23()" id="become2"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            16-may-1944</p>
+                        <br>
+                        <br>
+                        <p onclick="Pakistankkk24()" id="become3"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            17-dec-1988</p>
+                        <br>
+                        <br>
+                        <p onclick="Pakistankkk25()" id="become4"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            14-june-1990</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="option-container">
+
+
+
+
+            </div>
+            <div class="next-question-btn">
+                <button onclick="tododd4()" style="display: none;" type="button" class="btn" id="next2">Next</button>
+            </div>
+            <div class="answers-indicator">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="item6" style="display: none;">
+        <div class="quiz-box" class="hide">
+            <div class="question-number">
+                Question 1 of 5
+            </div>
+            <div id="items9" class="question-text">
+                <div id="list2">
+                    <p>Ramadan is which month?</p>
+                    <br>
+                    <div onclick="ramaddddaaan()">
+                        <p onclick="ramaddddaaan1()" id="monthyer3"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            9</p>
+                        <br>
+                        <br>
+                        <p onclick="ramaddddaaan2()" id="monthyer4"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            8</p>
+                        <br>
+                        <br>
+                        <p onclick="ramaddddaaan3()" id="monthyer5"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            12</p>
+                        <br>
+                        <br>
+                        <p onclick="ramaddddaaan4()" id="monthyer6"
+                            style="background-color: rgb(101, 148, 156);padding: 15px 45px;border-radius: 10px;color: rgb(52, 53, 53);">
+                            11</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="option-container">
+
+
+
+
+            </div>
+            <div class="next-question-btn">
+                <button onclick="todouuuu5()" style="display: none;" type="button" class="btn" id="next5">Next</button>
+            </div>
+            <div class="answers-indicator">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="amna2" class="result-box" style="display: none;">
+        <h1 class="heading">Quiz Result</h1>
+        <table class="form">
+            <tr>
+                <td>Total Question</td>
+                <td><span class="total-question">5</span></td>
+            </tr>
+
+            <tr>
+                <td>Correct Answer</td>
+                <td><span id="CA" class="total-question">4</span></td>
+            </tr>
+
+        </table>
+        <button onclick="page1()" class="btn" type="button">Home Page</button>
+    </div>
+</body>
+<script>
+    function fabiha() {
+        document.getElementById('apps').style.display = "none";
+        document.getElementById('list').style.display = "block";
+    }
+
+    function todos1() {
+        document.getElementById('list').style.display = "none";
+        document.getElementById('item').style.display = "block";
+    }
+
+    function todoss2() {
+        document.getElementById('item').style.display = "none";
+        document.getElementById('item4').style.display = "block";
+
+
+    }
+
+    function todott3() {
+        document.getElementById('item4').style.display = "none";
+        document.getElementById('item5').style.display = "block";
+
+
+    }
+
+    function tododd4() {
+        document.getElementById('item5').style.display = "none";
+        document.getElementById('item6').style.display = "block";
+
+
+    }
+
+    function todouuuu5() {
+        document.getElementById('list').style.display = "none";
+        document.getElementById('item').style.display = "none";
+        document.getElementById('item4').style.display = "none";
+        document.getElementById('item5').style.display = "none";
+        document.getElementById('item6').style.display = "none";
+        document.getElementById('amna2').style.display = "block";
+
+
+
+    }
+
+    function page1() {
+        document.getElementById('amna2').style.display = "none";
+        document.getElementById('apps').style.display = "block";
+
+
+    }
+
+    function yearttt() {
+
+
+        document.getElementById("yearsko") = 600 < 399;
+
+
+
+
+        document.getElementById("yearss").innerHTML = 399 > 365
+
+
+
+
+
+        document.getElementById("yearert").innerHTML = 400 < 377;
+
+
+
+        document.getElementById("yearsipt").innerHTML = 500 < 377;
+
+    }
+
+    function yearttt() {
+        document.getElementById("yearss").style.backgroundColor = "Green";
+        document.getElementById("yearsko").style.backgroundColor = "Red";
+        document.getElementById("yearert").style.backgroundColor = "Red";
+        document.getElementById("yearsipt").style.backgroundColor = "Red";
+        document.getElementById("next").style.display = "block";
+
+    }
+
+    function amnaghtky() {
+
+        document.getElementById("dayssss").innerHTML = 200 < 30;
+
+        document.getElementById("dayssss2").innerHTML = 70 > 60;
+
+        document.getElementById("dayssss23").innerHTML = 200 < 40;
+
+        document.getElementById("dayssss4").innerHTML = 150 < 80;
+
+    }
+
+    function amnaghtky() {
+
+        document.getElementById("dayssss").style.backgroundColor = "Green";
+        document.getElementById("dayssss2").style.backgroundColor = "Red";
+        document.getElementById("dayssss23").style.backgroundColor = "Red";
+        document.getElementById("dayssss4").style.backgroundColor = "Red";
+        document.getElementById("next1").style.display = "block";
+
+    }
+
+    function Pakistankkk() {
+
+        document.getElementById("become1").innerHTML = 100 < 17;
+
+        document.getElementById("become2").innerHTML = 30 > 14;
+
+        document.getElementById("become3").innerHTML = 200 < 17;
+
+        document.getElementById("become4").innerHTML = 150 < 14;
+
+    }
+
+    function Pakistankkk() {
+
+        document.getElementById("become1").style.backgroundColor = "Green";
+        document.getElementById("become2").style.backgroundColor = "Red";
+        document.getElementById("become3").style.backgroundColor = "Red";
+        document.getElementById("become4").style.backgroundColor = "Red";
+        document.getElementById("next2").style.display = "block";
+
+    }
+
+    function ramaddddaaan() {
+
+        document.getElementById("monthyer3").innerHTML = 100 < 17;
+
+        document.getElementById("monthyer4").innerHTML = 30 > 14;
+
+        document.getElementById("monthyer5").innerHTML = 200 < 17;
+
+        document.getElementById("monthyer6").innerHTML = 150 < 14;
+
+    }
+
+    function ramaddddaaan() {
+
+        document.getElementById("monthyer3").style.backgroundColor = "Green";
+        document.getElementById("monthyer4").style.backgroundColor = "Red";
+        document.getElementById("monthyer5").style.backgroundColor = "Red";
+        document.getElementById("monthyer6").style.backgroundColor = "Red";
+        document.getElementById("next5").style.display = "block";
+
+    }
+
+    function Howyyyyy() {
+
+        document.getElementById("yearsk45").innerHTML = 100 < 17;
+
+        document.getElementById("yearss46").innerHTML = 30 > 14;
+
+        document.getElementById("yearert47").innerHTML = 200 < 17;
+
+        document.getElementById("yearsipt48").innerHTML = 150 < 14;
+
+    }
+
+    function Howyyyyy() {
+
+        document.getElementById("yearsk45").style.backgroundColor = "Green";
+        document.getElementById("yearss46").style.backgroundColor = "Red";
+        document.getElementById("yearert47").style.backgroundColor = "Red";
+        document.getElementById("yearsipt48").style.backgroundColor = "Red";
+        document.getElementById("next6").style.display = "block";
+
+    }
+    function years2() {
+        Document.getElementById("CA").innerHTML++
+
+        
+    }
+
+    
+</script>
